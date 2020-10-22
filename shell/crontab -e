@@ -1,0 +1,14 @@
+# 定时同步时间
+2 2 * * * sh /var/sh/syndate/syndate.sh
+
+# 定时备份
+1 1 * * 1,3,5 sh /var/sh/database/database_backup.sh
+
+# Moodle统计定时任务
+*/30 * * * * php /var/moodle.nerc-edu.net/moodle/admin/cli/cron.php
+
+# 同步课程和定时发送项目开始通知
+0 0 * * * /usr/bin/php /var/www/gknx/gknx/background/course/send_email_classinfo_start.php
+*/20 * * * * /usr/bin/php /var/www/gknx/gknx/background/course/syn_course.php
+5 0 * * * /usr/bin/php /var/www/gknx/gknx/background/course/syn_category.php
+15 0 * * * /usr/bin/php /var/www/gknx/gknx/background/course/syn_drop_course_category.php
