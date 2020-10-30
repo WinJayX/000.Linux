@@ -19,3 +19,16 @@ do
     source address="$line" port protocol="tcp" port="80" accept" &&\
     firewall-cmd --reload
 done < $1
+
+
+
+
+
+
+
+#====================
+while read line
+do
+kubectl get deployments.apps "$line" -o yaml > "$line".yaml
+
+done < $1
