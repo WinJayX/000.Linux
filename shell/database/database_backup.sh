@@ -15,7 +15,7 @@ MOODLE_DB_NAME="moodle"
 # Others vars
 BIN_DIR="/usr/bin"
 BACK_DIR="/var/backup/databases"
-DATE=`date '+%Y.%m.%d_%H:%M:%S'`
+DATE=`date +%Y%m%d%H%M%S`
 
 mkdir -p "$BACK_DIR"/$DATE
 

@@ -1,3 +1,4 @@
+```bash
 #!/bin/bash
 # author:WinJayX
 # date:2020-04-28
@@ -6,3 +7,5 @@
 
 pwd 
 ls
+```
+
