@@ -3,7 +3,8 @@ name: Auto commit
 on:
   schedule:
 #    - cron: "* 19 * * *"       # See https://crontab.guru/#0_7,9,11_*_*_1,3
-    - cron: "0 */12 * * *"
+#    - cron: "18 11,15,18 * * *" # 每天11,15,18点的18分执行，时间为国际标准时间UTC，非北京时间CST！！
+    - cron: "18 3,7,10 * * *"    # 北京时间CST 的每天11,15,18点的18分执行，北京时间CST！！标准时间+8 即11,15,18点.
 
   workflow_dispatch:
 
